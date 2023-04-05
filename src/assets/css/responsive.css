@@ -1,0 +1,38 @@
+@media only screen and (max-width: 1400px) {
+    .body-content-carousel {
+        padding: 125px 0 2vw 0; 
+    }
+    
+    .carousel-item > .carousel-btn {
+        left: 3.5%;
+        bottom: 5vw;
+    }
+    .form-outline > .form-control {
+        width: 12vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .carousel-item > .carousel-caption {
+        width: 50vw;
+        top: 10vw;
+    }
+    
+}
+
+@media only screen and (max-width: 992px) {
+    .carousel-item {
+        padding: auto auto;
+    }
+    .trailer {
+        display: none;     
+    
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .form-outline > .form-control {
+        width: 100%;
+        padding-right: 30vw;
+    }
+}

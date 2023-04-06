@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import './assets/css/styles.css'
-import logo from './assets/images/logo2.png'
+import '../../assets/css/styles.css'
+import logo from '../../assets/images/logo2.png'
 
 
-function Home() {
+function Navbar() {
   return (
     <div className="Home">
       <nav class="navbar navbar-expand-xxl bg-black navbar-dark fixed-top">
@@ -47,4 +47,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Navbar

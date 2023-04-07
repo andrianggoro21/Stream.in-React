@@ -410,6 +410,8 @@ footer > .body-footer {
     background-color: #6B4FDD;
 }
 
+/* footer */
+
 .card:hover {
     transform: scale(1.1);
     transition: 1s;

@@ -1,8 +1,8 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import '../../assets/css/styles.css'
-import logo from '../../assets/images/logo2.png'
+import '../assets/css/styles.css'
+import logo from '../assets/images/logo2.png'
 
 
 function Navbar() {

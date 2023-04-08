@@ -1,23 +1,33 @@
-import React from "react"
+import React, { useState, useEffect }  from "react"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import Carousel from 'react-bootstrap/Carousel';
 import '../assets/css/styles.css'
-import Navbar from '../components/Navbar/Navbar'
+import Navbar from '../components/Navbar'
 import imgCorousel1 from '../assets/images/img-carousel-new1.png'
 import imgCorousel2 from '../assets/images/img-carousel-new2.png'
 import imgCorousel3 from '../assets/images/img-carousel-new3.png'
-import Footer from '../components/Footer/Footer'
+import Footer from '../components/Footer'
+import Card from "../components/Card";
+import { Row } from "react-bootstrap";
+import { getMovies } from "../api/getMovie";
 
 
 function Home() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    getMovies().then((result) => {
+      setMovies(result);
+    });
+  }, []);
   return (
     <div className='home-page'>
     <Navbar />
     <div class="body-content-carousel">
-    <div class="container-fluid">
-    <Carousel>
-    <Carousel.Item>
+      <div class="container-fluid">
+      <Carousel>
+      <Carousel.Item>
       <img className="d-block w-100" src={imgCorousel1} alt="First slide" />
       <div class="carousel-btn d-flex align-items-center gap-3">
         <a class="watch-now" href="./streaming.html">
@@ -63,6 +73,19 @@ function Home() {
       </div>
     </Carousel.Item>
     </Carousel>
+    </div>
+  </div>
+  <div class="body-content-home">
+    <div class="card-most-popular">
+      <div class="card-content d-flex justify-content-between">
+        <span class="card-content-text">Most Popular</span>
+        <span class="see-more"><a href="./most-popular.html">See more</a></span>
+      </div>
+      <Row className="g-4" xs={1} sm={1} md={3} lg={6}>
+        {movies.slice(0, 18).map((movie) => (
+              <Card key={movie.id} {...movie} />
+            ))}
+      </Row>
     </div>
   </div>
   <Footer/>

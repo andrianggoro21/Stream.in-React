@@ -1,11 +1,11 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import '../../assets/css/styles.css'
-import logo from '../../assets/images/logo2.png'
-import ig from '../../assets/images/ig.png'
-import twitter from '../../assets/images/twitter.png'
-import email from '../../assets/images/email2.png'
+import '../assets/css/styles.css'
+import logo from '../assets/images/logo2.png'
+import ig from '../assets/images/ig.png'
+import twitter from '../assets/images/twitter.png'
+import email from '../assets/images/email2.png'
 
 function Footer() {
     return (

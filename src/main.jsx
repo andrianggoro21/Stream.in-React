@@ -3,30 +3,38 @@ import ReactDOM from 'react-dom/client'
 import './assets/css/styles.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './pages/Home';
+import Login from './pages/login';
+import Profile from './pages/Profile'
+
 
 const router = createBrowserRouter ([
   {
-    path: "/streamin",
+    path: "/",
     element: <Home />,
   },
   {
-    path: "/streamin/signin",
-    element: <div><h1>Sign In</h1></div>,
+    path: "/login",
+    element: <Login />,
   },
   {
-    path: "/streamin/signup",
+    path: "/profile",
+    element: <Profile />,
+  },
+  
+  {
+    path: "/signup",
     element: <div><h1>Sign Up</h1></div>,
   },
   {
-    path: "/streamin/tvshows",
+    path: "/tvshows",
     element: <div><h1>TV Shows</h1></div>,
   },
   {
-    path: "/streamin/movie",
+    path: "/movie",
     element: <div><h1>Movie</h1></div>,
   },
   {
-    path: "/streamin/newrelease",
+    path: "/newrelease",
     element: <div><h1>New Release</h1></div>,
   },
   {

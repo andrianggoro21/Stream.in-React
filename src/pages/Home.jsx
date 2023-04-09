@@ -10,14 +10,14 @@ import imgCorousel3 from '../assets/images/img-carousel-new3.png'
 import Footer from '../components/Footer'
 import Card from "../components/Card";
 import { Row } from "react-bootstrap";
-import { getMovies } from "../api/getMovie";
+import {apiTmdb} from "../api/apiTmdb";
 
 
 function Home() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    getMovies().then((result) => {
+    apiTmdb().then((result) => {
       setMovies(result);
     });
   }, []);

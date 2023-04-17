@@ -1,47 +1,46 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './assets/css/styles.css'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from './pages/Home';
-import Login from './pages/login';
-import Profile from './pages/Profile'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./main.css";
+import Navbar from "./components/Navbar";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import WatchList from "./pages/WatchList";
+import MovieList from "./pages/MovieList";
+import Footer from "./components/Footer";
 
 
-const router = createBrowserRouter ([
+const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </>
+    ),
+    errorElement: <p>Page Not Found</p>,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/watchlist",
+        element: <WatchList />,
+      },
+      {
+        path: "/movielisted/:listID",
+        element: <MovieList />,
+      },
+    ],
   },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/profile",
-    element: <Profile />,
-  },
-  
-  {
-    path: "/signup",
-    element: <div><h1>Sign Up</h1></div>,
-  },
-  {
-    path: "/tvshows",
-    element: <div><h1>TV Shows</h1></div>,
-  },
-  {
-    path: "/movie",
-    element: <div><h1>Movie</h1></div>,
-  },
-  {
-    path: "/newrelease",
-    element: <div><h1>New Release</h1></div>,
-  },
-  {
-    path: "/streamin/mostpopular",
-    element: <div><h1>Most Popular</h1></div>,
-  },
-])
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />

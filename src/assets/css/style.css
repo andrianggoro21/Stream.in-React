@@ -1,0 +1,35 @@
+body {
+    background: #151515;
+}
+  
+.background-color {
+    background: black;
+}
+  
+.button-style {
+    background-color: #6B4FDD;
+    opacity: 0.8;
+}
+
+  
+.shadow-style {
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.8);
+}
+  
+.card-style {
+    padding: 0px;
+}
+  
+.lines-style {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+  
+.carousel-item {
+    height: 35rem;
+    position: relative;
+    background: #202439;
+    background-position: center;
+    background-size: cover;
+}
+  

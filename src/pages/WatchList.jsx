@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
-
-const API_KEY = import.meta.env.VITE_TMDB_APIKEY
+import { API_KEY } from "../api/apiTmdb";
 
 const WatchList = () => {
   const [data, setData] = useState();

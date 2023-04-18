@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-
-const API_KEY = import.meta.env.VITE_TMDB_APIKEY
+import { API_KEY } from "../api/apiTmdb";
 
 const MovieList = () => {
   let { listID } = useParams();

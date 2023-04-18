@@ -2,8 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../assets/css/style.css";
 import Logo from "../assets/images/logo2.png";
-
-const API_KEY = import.meta.env.VITE_TMDB_APIKEY
+import { API_KEY } from "../api/apiTmdb";
 
 function Navbar() {
   const [username, setUsername] = useState();

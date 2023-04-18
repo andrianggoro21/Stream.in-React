@@ -2,8 +2,7 @@ import { useFormik } from "formik";
 import React, { useEffect } from "react";
 import * as Yup from "yup";
 import axios from "axios";
-
-const API_KEY = import.meta.env.VITE_TMDB_APIKEY
+import { API_KEY } from "../api/apiTmdb";
 
 async function generateRequestToken() {
   try {

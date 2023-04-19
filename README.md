@@ -9,7 +9,7 @@ Stream.in project create by using [ReactJS](https://reactjs.org/), [Vite](https:
 - Watch List Page
 - Watch Movie Page
 - Movie Card View
-- Detail of Movie and TV Show
+- Detail of Movie
 
 ## Libraries and Tools
 This project uses several libraries consisting of:

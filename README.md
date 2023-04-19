@@ -49,7 +49,7 @@ import * as Yup from 'yup';
 
 ### React Router
 - Type `npm install react-router-dom` on your terminal.
-- Once the package installed, you can import library in the `index.js` file:
+- Once the package installed, you can import library in the `main.jsx` file:
 ```js
 import ReactDOM from "react-dom/client";
 ```
